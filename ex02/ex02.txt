@@ -1,0 +1,21 @@
+package com.mycompany.exercise02;
+
+public class Exercise02 {
+
+    public static void main(String[] args) {
+        int[] vetor = {10, 20, 30, 40, 50};
+        int maior = maiorElemento(vetor);
+        System.out.println("O maior elemento do vetor é: " + maior);
+    }
+
+    public static int maiorElemento(int[] vetor) {
+        int maior = vetor[0];
+        for (int i = 1; i < vetor.length; i++) {
+            if (vetor[i] > maior) {
+                maior = vetor[i];
+
+            }
+        }
+        return maior;
+    }
+}
