@@ -1,0 +1,40 @@
+package com.mycompany.exercise08;
+
+import java.util.Arrays;
+
+public class Exercise08 {
+
+    public static void main(String[] args) {
+        int[] vetor = {1, 2, 3, 4, 5};
+        int e = 3;
+
+        System.out.println("Vetor original: " + Arrays.toString(vetor));
+
+        vetor = remover(vetor, e);
+
+        System.out.println("Vetor após remover o elemento: " + e + ": " + Arrays.toString(vetor));
+    }
+
+    public static int[] remover(int[] vetor, int e) {
+        int t = vetor.length;
+        int contador = 0;
+
+        for (int i = 0; i < t; i++) {
+            if (vetor[i] == e) {
+                contador++;
+            }
+        }
+
+        int[] novoVetor = new int[t - contador];
+        int j = 0;
+
+        for (int i = 0; i < t; i++) {
+            if (vetor[i] != e) {
+                novoVetor[j] = vetor[i];
+                j++;
+            }
+        }
+
+        return novoVetor;
+    }
+}

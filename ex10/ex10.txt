@@ -1,0 +1,27 @@
+package com.mycompany.exercise10;
+
+
+public class Exercise10 {
+
+    public static void main(String[] args) {
+        int[] vetor = {1, 2, 3, 4, 5};
+        int elemento = 3; 
+
+        int p = buscarElemento(vetor, elemento);
+
+        if (p != -1) {
+            System.out.println("O elemento " + elemento + " foi encontrado na posição " + p + ".");
+        } else {
+            System.out.println("O elemento " + elemento + " não foi encontrado.");
+        }
+    }
+
+    public static int buscarElemento(int[] vetor, int elemento) {
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == elemento) {
+                return i; 
+            }
+        }
+        return -1; 
+    }
+}

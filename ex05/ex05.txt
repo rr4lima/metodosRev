@@ -1,0 +1,31 @@
+package com.mycompany.exercise05;
+
+public class Exercise05 {
+
+    public static void main(String[] args) {
+        int[] vetor1 = {1, 2, 3, 4, 5};
+        int[] vetor2 = {1, 2, 3, 4, 5};
+
+        boolean iguais = verificar(vetor1, vetor2);
+
+        if (iguais) {
+            System.out.println("Os vetores são iguais.");
+        } else {
+            System.out.println("Os vetores não são iguais.");
+        }
+    }
+
+    public static boolean verificar(int[] vetor1, int[] vetor2) {
+        if (vetor1.length != vetor2.length) {
+            return false;
+        }
+
+        for (int i = 0; i < vetor1.length; i++) {
+            if (vetor1[i] != vetor2[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
