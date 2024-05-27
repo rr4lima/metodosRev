@@ -24,4 +24,8 @@ public class Exercise01 {
         }
         return resultado;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ae07884fbda824ba630846800bb0441e21726a35
